@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .then(data => {
         
-            formMessage.textContent = `${data.answer}`;
+            formMessage.innerHTML = `${data.answer.replace(/\n/g, '<br>')}`;
         
             formMessage.style.color = 'green';
               
